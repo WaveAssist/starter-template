@@ -1,0 +1,21 @@
+name: Base-Template
+description: Three-node ETL starter for WaveAssist that ingests demo data, transforms it, and prints the result.
+
+requirements:
+  - waveassist
+
+nodes:
+  - key: ingest_data
+    name: IngestData
+    file_name: ingest_data.py
+    starting_node: true
+
+  - key: transform_data
+    name: TransformData
+    file_name: transform_data.py
+    run_after: [ingest_data]
+
+  - key: load_data
+    name: LoadData
+    file_name: load_data.py
+    run_after: [transform_data]
