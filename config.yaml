@@ -1,4 +1,4 @@
-name: Base-Template
+name: Starter-Template
 description: Three-node ETL starter for WaveAssist that ingests demo data, transforms it, and prints the result.
 
 requirements:
